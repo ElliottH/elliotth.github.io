@@ -1,0 +1,10 @@
+<li>
+  <h2>
+    <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+    <span class="post-eta">&mdash; {{ post.date | date: "%b %-d, %Y" }}</span>
+  </h2>
+  {% if post.excerpt %}
+    <p>{{ post.excerpt }}</p>
+    <p><a href="{{ post.url | prepend: site.baseurl }}">Read More &raquo;</a></p>
+  {% endif %}
+</li>

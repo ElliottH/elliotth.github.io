@@ -184,10 +184,15 @@
 }
 
 .post-link {
-    display: block;
+    display: inline-block;
     font-size: 24px;
 }
 
+.post-eta {
+    display: inline-block;
+    font-size: 18px;;
+    color: $grey-color;
+}
 
 
 /**
@@ -231,6 +236,19 @@
 
         @include media-query($on-laptop) {
             font-size: 18px;
+        }
+    }
+}
+
+.archive {
+    margin-bottom: 1em;
+
+    .categories {
+        margin-left: 1em;
+
+        ul li {
+            display: inline-block;
+            list-style-type: none;
         }
     }
 }

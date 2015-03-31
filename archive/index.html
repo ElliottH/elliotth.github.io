@@ -1,0 +1,23 @@
+---
+layout: default
+title: Archive
+---
+
+{% for post in site.posts %}
+  <div class="archive">
+    <h2><a class="post-link" href="{{ post.url }}">
+      {{ post.title }}</a>
+      <span class="post-eta">&mdash; {{ post.date | date_to_string }}</span>
+    </h2>
+    {% if post.categories %}
+    <div class="categories">
+      filed under:
+      <ul>
+      {% for category in post.categories %}
+        <li><a href="/category/{{ category }}">{{ category }}</a></li>
+      {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+  </div>
+{% endfor %}
